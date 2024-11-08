@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Custom Challenge</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="card ">
+            <div class="card-header text-white bg-primary py-3">
+                <h2 class="m-0">Edit Custom Challenge</h2>
+                <button type="button" class="btn-close btn-close-white float-end" aria-label="Close"></button>
+            </div>
+            <div class="c-header">
+                <small>Last modified by 23130317@st.hcmuaf.edu.vn on Nov 08, 2024</small>
+            </div>
+
+            <div class="card-body">
+                <form id="customChallengeForm">
+                    <!-- Title -->
+                    <div class="mb-3">
+                        <label for="challengeTitle" class="form-label">Title</label>
+                        <input type="text" class="form-control" id="challengeTitle" placeholder="DSA ET Opt7 01" required aria-required="true">
+                    </div>
+
+                    <!-- Difficulty -->
+                    <div class="mb-3">
+                        <label for="difficulty" class="form-label">Difficulty:</label>
+                        <select class="form-select" id="difficulty" required aria-required="true">
+                            <option value="" disabled selected>Select difficulty</option>
+                            <option>Easy</option>
+                            <option>Medium</option>
+                            <option>Hard</option>
+                        </select>
+                    </div>
+
+                    <!-- Short description -->
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Short description:</label>
+                        <input type="text" class="form-control" id="description" placeholder="This is a private challenge" required aria-required="true">
+                    </div>
+
+                    <!-- Problem statement -->
+                    <div class="mb-3">
+                        <label for="editor" class="form-label">Problem statement:</label>
+                        <textarea class="form-control custom-textarea" id="editor" placeholder="Write a program to count the number of elements as odd numbers in the array..."></textarea>
+                    </div>
+
+                    <!-- Footer note -->
+                    <div class="footer-note mb-3">
+                        Starter code will automatically be generated for all 18 coding languages.
+                    </div>
+
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="input-container">
+                            <label class="form-label">Input type</label>
+                            <select class="form-select" aria-label="Input type">
+                                <option>Array of integers</option>
+                                <option>Integer</option>
+                                <option>String</option>
+                            </select>
+                        </div>
+                        <div class="output-container">
+                            <label class="form-label">Output type</label>
+                            <select class="form-select" aria-label="Output type">
+                                <option>Integer</option>
+                                <option>Boolean</option>
+                                <option>String</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Required test cases -->
+                    <label class="form-label">Required test cases</label>
+                    <div id="testCases">
+                        <!-- Test case template -->
+                        <div class="input-group mb-2">
+                            <input type="text" class="form-control" placeholder="Input" aria-label="Test case input">
+                            <span class="input-group-text">--></span>
+                            <input type="text" class="form-control" placeholder="Expected output" aria-label="Expected output">
+                        </div>
+                    </div>
+
+                    <!-- Add test case button -->
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-outline-secondary btn-sm" id="addTestCase" aria-label="Add test case">Add test case</button>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary">Update Custom Challenge</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
